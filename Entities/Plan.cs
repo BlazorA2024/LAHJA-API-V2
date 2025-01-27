@@ -7,7 +7,7 @@ namespace Entities
     {
         [Key]
         public string Id { get; set; } = $"plan_{Guid.NewGuid():N}";
-        public string ProductId { get; set; } = $"prod_{Guid.NewGuid():N}";
+        public string ProductId { get; set; } = "price_1Pst3IKMQ7LabgRTZV9VgPex";
         public required string ProductName { get; set; }
         //public required long NumberRequests { get; set; }
         public string? Description { get; set; }

@@ -125,6 +125,7 @@ public class WebhookController(
         // Resolve DataContext from the new scope
         var context = scope.ServiceProvider.GetRequiredService<DataContext>();
         var subscriptionRepo = new SubscriptionRepository(context);
+
         var userSubscription = await subscriptionRepo.GetByAsync(s => s.CustomerId == subscription.CustomerId, false);
         if (userSubscription != null)
         {

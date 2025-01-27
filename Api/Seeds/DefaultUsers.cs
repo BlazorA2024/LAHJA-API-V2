@@ -26,6 +26,7 @@ namespace Api.Seeds
                 await emailStore.SetEmailAsync(user, email, CancellationToken.None);
                 await PhoneNumberStore.SetPhoneNumberAsync(user, phoneNumber, CancellationToken.None);
                 user.EmailConfirmed = true;
+
                 await ClaimStore.AddClaimsAsync(user, [
                     new Claim(ClaimTypes2.FirstName, firstName),
                 new Claim(ClaimTypes2.LastName, lastName),

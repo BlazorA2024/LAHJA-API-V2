@@ -36,12 +36,12 @@ namespace Api.Controllers
 
                 var plan = await planRepository.GetByAsync(p => p.Id == checkoutOptions.PlanId);
                 if (plan is null) return NotFound(new ProblemDetails { Title = "NOT FOUND", Detail = "Plan not found" });
-
+               
                 await CreateCustomer(user);
-
+                //checkoutOptions.PlanId = "price_1Pst3IKMQ7LabgRTZV9VgPex";
                 //var setting = await settingService.GetBy(s => s.Value == checkoutOptions.PlanId);
                 var response = await CreateFreeSubscription(checkoutOptions, plan, user);
-                if (response != null) return response;
+                if (response == null) return response;
 
                 var options = new SessionCreateOptions
                 {
@@ -75,7 +75,7 @@ namespace Api.Controllers
 
         private async Task<ActionResult?> CreateFreeSubscription(CheckoutOptions checkoutOptions, Plan plan, ApplicationUser user)
         {
-            if (plan.Amount == 0)
+            if (plan.Amount >= 0)
             {
                 var sub = await stripeSubscription.CreateAsync(new Stripe.SubscriptionCreateOptions()
                 {

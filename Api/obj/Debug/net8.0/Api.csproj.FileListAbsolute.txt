@@ -1026,3 +1026,4 @@ C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\Api\obj\Debug\n
 C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\Api\obj\Debug\net8.0\Api.pdb
 C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\Api\obj\Debug\net8.0\ref\Api.dll
+C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\Api\obj\Debug\net8.0\Api.sourcelink.json

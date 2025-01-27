@@ -5,6 +5,7 @@ using Dto.Plan;
 using Dto.PlanServices;
 using Entities;
 using Microsoft.EntityFrameworkCore;
+
 using System.Linq;
 
 namespace Api.Repositories
@@ -13,7 +14,7 @@ namespace Api.Repositories
     {
         Task<IEnumerable<PlanView>> GetAllAsGroupAsync( string langauge);
         void EventOccured(Plan plan, int number);
-
+        Task<PlanView?> GetByIdAsync(string id,string lg);
     }
     
     public class PlanRepository : BaseRepository<Plan>, IPlanRepository
@@ -24,9 +25,12 @@ namespace Api.Repositories
             mapper = mapper;
         }
 
-        public async Task<Plan?> GetByIdAsync(string id)
+        public async Task<PlanView?> GetByIdAsync(string id, string lg)
         {
-            return await _dbSet.FindAsync(id);
+            var item = await _dbSet.FindAsync(id);
+             var pv = mapper.Map<PlanView>(new TranslationView<Plan>() { Value = item, LG = lg });
+
+            return pv;
         }
 
         public async Task<IEnumerable<Plan>> GetAllAsync()

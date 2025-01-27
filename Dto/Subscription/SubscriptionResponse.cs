@@ -15,4 +15,12 @@ namespace Dto.Subscription
 
         public PlanResponse Plan { get; set; }
     }
+
+
+    public class SubscriptionCreate
+    {
+        public string PlanId { get; set; }
+
+       
+    }
 }

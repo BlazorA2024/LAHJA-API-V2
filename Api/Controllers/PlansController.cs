@@ -1,11 +1,8 @@
 ﻿using Api.Repositories;
-using ASG.Api2.Results;
 using AutoMapper;
 using Dto;
 using Dto.Plan;
-using Dto.PlanServices;
 using Entities;
-using FluentResults;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -45,24 +42,7 @@ namespace ASG.Api2.Controllers
 
             var result = await planRepository.GetAllAsGroupAsync(langauge);
 
-            //var planServices = mapper.Map<Dto.Plan.PlanFeature[], PlanGrouping[]>(
-            //    result.Cast<Dto.Plan.PlanFeature>().ToArray()
-            //);
-
-          
-
-            //var listt=new List<Dto.Plan.PlanFeature>();
-            //foreach (var item in result.pro)
-            //{
-            //    // إنشاء كائن جديد لكل عنصر
-            //    var cc = new Dto.Plan.PlanFeature
-            //    {
-            //        Name = HelperTranslation.ConvertTextToTranslationData(item.ProductId)
-            //    };
-
-            //    // إضافة الكائن إلى القائمة
-            //    listt.Add(cc);
-            //}
+            
 
 
             return Ok(result);
@@ -72,11 +52,11 @@ namespace ASG.Api2.Controllers
         [HttpGet("{id}", Name = "GetPlan")]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<PlanResponse>> GetOne(string id)
+        public async Task<ActionResult<PlanView>> GetOne(string id,string lg)
         {
-            var plan = await planRepository.GetByAsync(p => p.Id == id);
-            var item = mapper.Map<PlanResponse>(plan);
-            return Ok(item);
+            var plan = await planRepository.GetByIdAsync(id,lg);
+           
+            return Ok(plan);
         }
 
         [EndpointSummary("Create a plan")]

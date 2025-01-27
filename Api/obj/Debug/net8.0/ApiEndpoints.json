@@ -988,6 +988,11 @@
         "Name": "id",
         "Type": "System.String",
         "IsRequired": true
+      },
+      {
+        "Name": "lg",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -1001,7 +1006,7 @@
         "StatusCode": 401
       },
       {
-        "Type": "Dto.Plan.PlanResponse",
+        "Type": "Dto.Plan.PlanView",
         "MediaTypes": [
           "text/plain",
           "application/json",

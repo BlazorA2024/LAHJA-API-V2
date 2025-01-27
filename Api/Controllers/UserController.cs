@@ -35,7 +35,7 @@ namespace Api.Controllers
         {
             var user = await userRepository.GetAllAsync(null, setInclude: u => u.Include(s => s.Subscription));
             var response = mapper.Map<List<UserResponse>>(user);
-
+       
             return Ok(response);
         }
 

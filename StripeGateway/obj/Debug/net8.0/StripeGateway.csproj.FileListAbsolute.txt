@@ -71,3 +71,4 @@ C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\StripeGateway\o
 C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\StripeGateway\obj\Debug\net8.0\refint\StripeGateway.dll
 C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\StripeGateway\obj\Debug\net8.0\StripeGateway.pdb
 C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\StripeGateway\obj\Debug\net8.0\ref\StripeGateway.dll
+C:\Users\Elite\Downloads\LAHJA-API-v1-master\LAHJA-API-v1-master\StripeGateway\obj\Debug\net8.0\StripeGateway.sourcelink.json

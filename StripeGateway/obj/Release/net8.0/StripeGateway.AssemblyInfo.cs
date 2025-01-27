@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StripeGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c561a871b874ea9a55229c33d00e17a606d7a57b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50bbff5c307aae960d825db03b1257a08aa613e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("StripeGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StripeGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

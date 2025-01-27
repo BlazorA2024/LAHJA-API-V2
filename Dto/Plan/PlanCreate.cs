@@ -14,8 +14,9 @@ namespace Dto.Plan
     }
     public class PlanCreate
     {
-       
 
+        public string ProductId { get; set; } = "price_1Pst3IKMQ7LabgRTZV9VgPex";
+        public string? Id { get; set; }
         [Required(ErrorMessage = "Price id is Required")]
         public decimal Price { get; set; }
         public required  Dictionary<string, string> Name { get; set; }
