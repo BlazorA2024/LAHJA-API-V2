@@ -26,7 +26,11 @@ public class DataContext
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Invoice> Invoices { get; set; }
     public DbSet<PlanServices> PlanServices { get; set; }
-
+    public DbSet<Language> Languages { get; set; }
+    public DbSet<CategoryModel> Categories { get; set; }
+    public DbSet<TypeModel> Types { get; set; }
+    public DbSet<Dialect> Dialects { get; set; }
+    public DbSet<Advertisement> Advertisements { get; set; }
 
     public DbSet<Setting> Settings { get; set; }
     public DbSet<Space> Spaces { get; set; }

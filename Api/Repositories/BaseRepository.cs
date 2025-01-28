@@ -24,6 +24,7 @@ public interface IBaseRepository<T> where T : class
     Task<int> SaveAsync();
     Task<bool> Exists(Expression<Func<T, bool>> filter);
     IQueryable<T> GetQuery();
+
 }
 public class BaseRepository<T> : IBaseRepository<T> where T : class
 {

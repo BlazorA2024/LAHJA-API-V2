@@ -7,6 +7,7 @@ using Microsoft.Data.SqlClient;
 
 namespace Api.Services
 {
+
     public class ServiceService(IServiceRepository repo, IMapper mapper)
     {
 

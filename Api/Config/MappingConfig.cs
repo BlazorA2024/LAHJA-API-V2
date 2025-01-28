@@ -13,6 +13,7 @@ using Dto.Subscription;
 using Dto.User;
 using Entities;
 using FluentResults;
+using VM;
 
 
 namespace Api.Config
@@ -106,6 +107,18 @@ namespace Api.Config
             //CreateMap<TranslationView<Plan>, PlanView>().ForMember(sm => sm.Name, smc => smc.MapFrom(smc => HelperTranslation.getTranslationValueByLG(smc.Value.ProductName, smc.LG)))
             //    .ForMember(sm => sm.Description, smc => smc.MapFrom(smc => HelperTranslation.getTranslationValueByLG(smc.Value.Description, smc.LG)))
             //   .ForMember(sm => sm.PlanFeatures, smc => smc.MapFrom(smc => smc.Value.PlanFeatures));
+            CreateMap<CreateSpaceRequest, Space>();
+            CreateMap<UpdateSpaceRequest, Space>();
+            CreateMap<Space, SpaceResponse>();
+
+            CreateMap<CreateSpaceVM, Space>();
+            CreateMap<CreateSpaceVM, SpaceVM>();
+
+
+            CreateMap<UpdateSpaceVM, Space>();
+            CreateMap<Space, SpaceVM>();
+                //.ForMember(dest => dest.Subscription, opt => opt.MapFrom(src => src.Subscription))
+                //.ForMember(dest => dest.Requests, opt => opt.MapFrom(src => src.Requests));
 
         }
     }

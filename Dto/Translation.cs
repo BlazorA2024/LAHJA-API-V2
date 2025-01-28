@@ -10,6 +10,9 @@ namespace Dto
         public  T Value { get; set; }
         public  string  LG { get; set; }
     }
+
+ 
+
     public class HelperTranslation
     {
 
