@@ -1,9 +1,12 @@
 using Api;
 using Api.CustomPolicy;
+using Api.Repositories.DachRepository;
 using Api.Seeds;
+using Api.ServiceLayer.LayerModel;
 using ASG.ApiService.CustomPolicy;
 using ASG.ApiService.OutputCaching;
 using ASG.Helper;
+using CardShapping.Api.RepositoryAPI.SerchRepository;
 using Data;
 using Entities;
 using Microsoft.AspNetCore.Authentication;
@@ -84,6 +87,17 @@ builder.Services.AddIdentityCore<ApplicationUser>(options =>
     .AddApiEndpoints();
 
 
+
+
+builder.Services.AddScoped<IModelService, ModelService>();
+builder.Services.AddScoped(typeof(ISearchRepository<>), typeof(SearchRepository<>));
+
+
+
+
+builder.Services.AddScoped<IPlanVisualizationRepository, PlanVisualizationRepository>();
+builder.Services.AddScoped<IRequestVisualizationRepository, RequestVisualizationRepository>();
+builder.Services.AddScoped<IServiceVisualizationRepository, ServiceVisualizationRepository>();
 builder.Services.Configure<IdentityOptions>(options =>
 {
     /*

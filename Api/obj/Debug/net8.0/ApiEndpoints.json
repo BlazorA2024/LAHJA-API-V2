@@ -115,6 +115,160 @@
     "EndpointName": "CustomMapIdentityApi-api/confirmEmail"
   },
   {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "FilterServiceData",
+    "RelativePath": "api/dashboard/filter-service",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.DachBoard.RequestData, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetErrorsByTime",
+    "RelativePath": "api/dashboard/Get Errors By Time",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.DachBoard.ServiceDataTod, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetRequestsByTime",
+    "RelativePath": "api/dashboard/Get Requests By Time",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.DachBoard.RequestData, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetSpacesByRamAsync",
+    "RelativePath": "api/dashboard/Get Spaces By RamAsync/{ram}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ram",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetBySubscriptionIdAsync",
+    "RelativePath": "api/dashboard/GetBySubscriptionId/{subscriptionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subscriptionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetByTokenAsync",
+    "RelativePath": "api/dashboard/GetByToken/{token}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetServiceUsageData",
+    "RelativePath": "api/dashboard/plot plan data services",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.DachBoard.ServiceUsageData, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.DashboardController",
+    "Method": "GetPlanDataPlot",
+    "RelativePath": "api/dashboard/plot_plan_data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.DachBoard.ServiceUsageData, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ASG.Api2.Controllers.EventController",
     "Method": "Create",
     "RelativePath": "api/Event",
@@ -757,6 +911,80 @@
   },
   {
     "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetSettIng",
+    "RelativePath": "api/ModelAi/{langage}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "langage",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Dto.ModelAi.ModelPropertyValues",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetSettingModelAi",
+    "Summary": "Get Setting"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByCategory",
+    "RelativePath": "api/ModelAi/category/{category}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByCategory",
+    "Summary": "Get Models By Category"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
     "Method": "Create",
     "RelativePath": "api/ModelAi/CreateModelAi",
     "HttpMethod": "POST",
@@ -799,6 +1027,359 @@
       }
     ],
     "Summary": "Create a Model Ai"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByDialect",
+    "RelativePath": "api/ModelAi/dialect/{dialect}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dialect",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByDialect",
+    "Summary": "Get Models By Dialect"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByGender",
+    "RelativePath": "api/ModelAi/gender/{gender}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gender",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByGender",
+    "Summary": "Get Models By Gender"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetFilterModel",
+    "RelativePath": "api/ModelAi/GetFilterModel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serchModelAI",
+        "Type": "Dto.ModelAi.FilterModelAI",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "FilterMaodelAi",
+    "Summary": "Filter models"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByIsStandard",
+    "RelativePath": "api/ModelAi/is-standard/{isStandard}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "isStandard",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByIsStandard",
+    "Summary": "Get Models By IsStandard"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByLanguageAndDialect",
+    "RelativePath": "api/ModelAi/language-dialect",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "language",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dialect",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByLanguageAndDialect",
+    "Summary": "Get Models By Language and Dialect"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByLanguageDialectAndType",
+    "RelativePath": "api/ModelAi/language-dialect-type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "language",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dialect",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByLanguageDialectType",
+    "Summary": "Get Models By Language, Dialect, and Type"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetValueFilterService",
+    "RelativePath": "api/ModelAi/language{lg}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lg",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Dto.ModelAi.ValueFilterModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetValueFilterService",
+    "Summary": "Get Value Filter Model"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByLanguage",
+    "RelativePath": "api/ModelAi/language/{language}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "language",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByLanguage",
+    "Summary": "Get Models By Language"
+  },
+  {
+    "ContainingType": "ASG.Api2.Controllers.ModelAiController",
+    "Method": "GetByTypeAndGender",
+    "RelativePath": "api/ModelAi/type-gender",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "gender",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Dto.ModelAi.ModelAiResponse, Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetModelsByTypeAndGender",
+    "Summary": "Get Models By Type and Gender"
   },
   {
     "ContainingType": "ASG.Api2.Controllers.ModelGatewayController",
